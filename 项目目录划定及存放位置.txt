@@ -1,0 +1,26 @@
+1、项目目录结构：
+项目名称：steptu
+结构：
+——steptu
+  ——index.php
+  ——ThinkPHP
+  ——Web
+    ——Commom
+    ——Conf
+    ——Lang
+    ——Lib
+    ——Runtime
+    ——Tpl
+      ——Index
+        ——Index（该目录下存放前端模板 xxx.html）
+        ——Public（该目录下存放css js images）
+          ——css
+          ——js
+          ——images
+
+2、定义的相对路径：
+前端把css、js、图片放在上述目录下之后，在html中这样引用：
+__CSS__/xxx.css
+__JS__/xxx.js
+__IMG__/xxx.png
+两个下划线
