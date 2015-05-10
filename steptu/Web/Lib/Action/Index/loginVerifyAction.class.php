@@ -50,7 +50,7 @@ class loginVerifyAction extends Action{
 		}
 		
 		 
-
+	}
 //		session('uid',$user['id']);
 //		session('username',$user['username']);
 //		session('time',date('Y-m-d H:i:s'),$user['time']);

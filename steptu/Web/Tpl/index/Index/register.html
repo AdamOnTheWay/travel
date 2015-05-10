@@ -42,15 +42,9 @@
                         <li><strong>确认密码：</strong><label><input class="ipt" type="password" name="confirm" size="20" id="confpassword" required></label></li>
                         <li><strong>邮箱：</strong><label><input class="ipt" type="email" name="log" size="20" required></label></li>
                         <li><strong>手机号：</strong><label><input class="ipt" type="tel" name="log" size="20" required></label></li>
-                        <li><strong>验证码：</strong><label><input class="ipt" type="text" name="log" size="20" style="width: 20%" required>&nbsp;<img src="{:U('Index/loginVerify/identify')}" id="code"/><a href="javascript:void(change_code(this));">看不清</a></label></li><br/>
+                       
                     </ol>
-                    <script>
-                        var verifyURL = "{:U('Index/loginVerify/identify','','')}";
-                        function change_code(){
-                            document.getElementById("code").setAttribute("src",verifyURL +'/' + Math.random());
-                            return false;
-                        }
-                    </script>
+            
                     <label style="padding-left: 70px"><input type="checkbox" value="">愿意接受免费的旅游咨询<br/></label><br/>
                     <label style="padding-left: 70px"><input type="checkbox" value="" required>我已阅读并接受了<a href="">注册协议</a></label><br/><br/>
                     <input class="btn btn-primary" type="submit" name="submit" value=" 提 交 注 册 " style="left: 70px" onclick="isEnterLegal()">
