@@ -60,6 +60,34 @@ steptu首页接口设计说明书：
 
 5.旅游志：
   {:U('index/travelNote')}
+  在首页加载完成时数据就已经完成，
+  一次向首页送5个数据：            //数据的个数可以调整
+
+  [0] => Array
+        (
+            [id] => 1
+            [image] => 1.php
+            [note] => 文字
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [image] => 2.phph
+            [note] => 文字
+        )
+
+
+        获取每个数据的在模板中，用foreach标签：     
+
+        在foreach标签中可以重复其他标签    
+
+
+        <foreach name='note' item='v'> 
+          <p>重复内容</P>        p标签中的内容重复多次
+          <p>{$v['note']}</p>   // 获取note的值  
+          {$v['image']}         //获取图片的路径
+        </foreach>
 
 6.优惠季：
   {:U('index/discountSeason')}

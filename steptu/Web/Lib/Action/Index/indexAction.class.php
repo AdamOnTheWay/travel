@@ -6,6 +6,8 @@ class indexAction extends Action{
 
 	//显示主页
 	public function index(){
+
+		$this->assign('note',$this->travelNote());
 		$this->display();
 	}
 
@@ -17,7 +19,8 @@ class indexAction extends Action{
 
 	//旅游志
 	public function travelNote(){
-
+		$note = M('travelnote')->limit("5")->select();
+		return $note;
 	}
 
 	//优惠季

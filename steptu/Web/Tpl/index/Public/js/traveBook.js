@@ -7,6 +7,7 @@
     var str = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
     document.getElementById("dataBox").innerHTML=str;
     document.getElementById("dataBoxLetter").innerHTML=str;
+    document.getElementById("dataBox_2").innerHTML=str;
 }
 function readerNumber(){
     var num = 0;
