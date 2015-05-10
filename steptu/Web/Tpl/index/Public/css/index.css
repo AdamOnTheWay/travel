@@ -40,8 +40,8 @@ position: absolute;
 .personal
 {
 	position: absolute;
-	left: 72px;
-	top: 170px;
+	left: 11px;
+	top: 305px;
 }
 .travelbook
 {
@@ -52,9 +52,8 @@ position: absolute;
 .travel
 {
 	position: absolute;
-	left: 11px;
-	top: 305px;
-	
+	left: 72px;
+	top: 170px;
 }
 .makeplan
 {
