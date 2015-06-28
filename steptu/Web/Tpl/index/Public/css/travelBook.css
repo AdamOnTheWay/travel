@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("../images/register/backgroung.png");
+    background-image: url("../images/travelBook/background.png");
     /*background-size: ;*/
     /*background-repeat: space;*/
 }
@@ -35,9 +35,6 @@ body{
     height: 19%;
     background-color: white;
 }
-.image{
-    /*width: 80%;*/
-}
 .image img{
     height: 84px;
     width: 27%;
@@ -45,6 +42,10 @@ body{
 }
 .textword{
     width: 70%;
+    float: left;
+}
+.textword_letter{
+    width: 100%;
     float: left;
 }
 .realContents{
@@ -57,22 +58,45 @@ body{
     margin-right: 10px;
 }
 .information{
-    height: 40%;
+    height: 55px;
     width: 100%;
-    background-color: red;
+    /*background-color: red;*/
+}
+.information_letter{
+    height: 45px;
+    width: 100%;
+    /*background-color: red;*/
 }
 .imgeye{
     height: 40px;
     float: left;
 }
 .passage{
-    height: 60%;
-    background-color: darkgray;
+    height: 15px;
+    overflow: auto;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 100%;
+    /*background-color: darkgray;*/
+}
+.passage_letter{
+    height: 15px;
+    overflow: auto;
+    padding-left: 20px;
+    width: 100%;
+    /*background-color: darkgray;*/
 }
 .titlebox{
     float: left;
     margin-left: 10px;
-    margin-top: 7px;
+    margin-top: 4px;
+    /*width: 100%;*/
+}
+.titlebox_letter{
+    float: left;
+    margin-left: 10px;
+    margin-top: 4px;
+    width: 80%;
     /*width: 100%;*/
 }
 .letterContents{
@@ -92,4 +116,10 @@ body{
 .twoBtn a:hover{
     color: black;
 }
-
+a{
+    color: #444444;
+}
+a:hover{
+    color: red;
+    font-weight: bolder;
+}

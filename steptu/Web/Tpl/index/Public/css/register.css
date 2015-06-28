@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    /*background-image: url("__IMG__/register/backgroung.png");*/
     background-image: url("../images/register/backgroung.png");
     /*background-size: ;*/
     /*background-repeat: space;*/
@@ -56,4 +57,11 @@ body{
     background-color: #5fd6ff;
     color: white;
     font-size: 15px;
+}
+a{
+    color: #444444;
+}
+a:hover{
+    color: red;
+    font-weight: bolder;
 }

@@ -20,37 +20,41 @@ class loginVerifyAction extends Action{
 		if(!IS_POST) _404('请先登录');//判断是否是以正常方式登录
 		//1.I方法第一个参数是前端表单里验证码的name
 		//2.判断并返回数据包
-		if(I('','','md5')!= session('identify')){
-			$data['code']=0;
-			$data['err']=2;
-			$data['msg']='验证码错误';
-			$this->ajaxReturn($data,'JSON');
-		} 
+		// if(I('','','md5')!= session('identify')){
+		// 	$data['code']=0;
+		// 	$data['err']=2;
+		// 	$data['msg']='验证码错误';
+		// 	$this->ajaxReturn($data,'JSON');
+		// }
 		//1.第一个I方法name参数是前端表单里帐号的name
 		//2.M方法里的参数是数据库的表名
 		//3.第二个I方法password参数是前端表单里密码的name，以md5格式加密
-		$username = I('name','','');
+		$username = I('log','','');
 		$user = M('usertable')->where(array('name'=>$username))->find();
-		$pwd = I('password','','md5');
-		else if(($username||$pwd)==''){
+		$pwd = I('pwd','','md5');
+		if($username==''||$pwd==''){
 			$data['code']=0;
 			$data['err']=1;
-			$data['msg']='帐号或密码不能为空';
+			// $data['msg']='帐号或密码不能为空';
 			$this->ajaxReturn($data,'JSON');
 		}
-		else if(!$user||$user['password']!=$pwd){
+	    if(!$user||$user['password']!=$pwd){
 			$data['code']=0;
 			$data['err']=0;
 			$data['msg']='帐号或密码不正确';
 			$this->ajaxReturn($data,'JSON');
-		}else{
+		}
+		if($user&&$user['password']==$pwd)
+		{
 			$data['code']=1;
 			$data['msg']='登录成功';
 			$this->ajaxReturn($data,'JSON');
+			setcookie("username",$user['username'],time()+3600,"/");
+			setcookie("userid",$user['id'],time()+3600,"/");
 		}
-		
-		 
 
+
+	}
 //		session('uid',$user['id']);
 //		session('username',$user['username']);
 //		session('time',date('Y-m-d H:i:s'),$user['time']);

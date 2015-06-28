@@ -208,3 +208,10 @@ textarea{
     top: 1435px;
     height: 33px;
 }
+a{
+    color: #444444;
+}
+a:hover{
+    color: red;
+    font-weight: bolder;
+}

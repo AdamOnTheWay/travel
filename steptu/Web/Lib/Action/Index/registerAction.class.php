@@ -120,18 +120,20 @@ class registerAction extends Action{
                 $user ->add($array);
                 $data['code']=1;
                 $data['msg']='成功';
+
+                $user = M("usertable")->where('name = '.$_POST['name'])->find();
+
+
+                session('uid',$user['id']);
+                session('username',$user['username']);
+                session('time',date('Y-m-d H:i:s')); 
                 $this->ajaxReturn($data,'JSON');
                 return;
             }
-
-
-
-
         }
 
         else{
-
-             $this->display();
+             _404('你没有按规定方式执行');
         }
     }
 
